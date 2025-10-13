@@ -12,7 +12,7 @@
 
 <script setup>
 defineProps({
-  bgClass: { type: String, default: 'bg-green-100' },
-  textClass: { type: String, default: 'text-green-800' },
+  bgClass: { type: String, default: 'bg-red-100' },
+  textClass: { type: String, default: 'text-red-800' },
 });
 </script>

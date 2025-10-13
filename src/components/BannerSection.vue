@@ -6,7 +6,7 @@
            draggable="false" />
     </div>
     <div class="w-full flex justify-center mt-3 mb-4 pb-6">
-      <img src="@/assets/images/logo.webp" alt="Liceu Brasil" class="h-8 lg:h-10" fetchpriority="high" />
+      <img src="@/assets/images/logo-fisk.webp" alt="Fisk" class="h-8 lg:h-10" fetchpriority="high" />
     </div>
   </section>
 </template>

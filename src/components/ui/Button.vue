@@ -2,7 +2,7 @@
   <button
       :type="type"
       :disabled="disabled"
-      class="w-full bg-[#0129A6] hover:bg-blue-900 text-white font-bold py-3 rounded-lg transition mt-2 text-lg shadow disabled:opacity-50"
+      class="w-full bg-red-800 hover:bg-red-900 text-white font-bold py-3 rounded-lg transition mt-2 text-lg shadow disabled:opacity-50"
   >
     <slot />
   </button>

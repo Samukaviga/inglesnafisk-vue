@@ -81,12 +81,9 @@ const availableGroupedOptions = (index: number) => {
 const registerForm = reactive<RegisterForm>({
   name: '',
   mobile_phone: '',
+  email: '', 
   date_of_birth: '',
-  courses: [
-    { order: 1, course: '' },
-    { order: 2, course: '' },
-    { order: 3, course: '' },
-  ],
+  course: '',
   city: '',
 });
 
@@ -102,17 +99,17 @@ async function handleSubmit() {
 
     isSubmitting.value = true;
 
-    const response = await axios.post(`${API_URL}/api/contacts/`, registerForm, {
-      headers: {
-        Authorization: `Bearer ${API_TOKEN}`,
-      },
-    });
+    const response = await axios.post(`${API_URL}/registrations`, registerForm);
 
-    const contactStore = useContactStore(response.data.id);
+    console.log('Response:', response);
 
-    contactStore.setContact(response.data);
+    const contact = response.data.data;
+    
+    const contactStore = useContactStore(contact.id);
 
-    router.push(`/completar/${response.data.id}`);
+    contactStore.setContact(contact);
+
+    router.push(`/sucesso/${contact.id}`);
   } catch (error: any) {
     isSubmitting.value = false;
 

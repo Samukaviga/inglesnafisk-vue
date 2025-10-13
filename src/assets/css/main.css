@@ -8,6 +8,6 @@ body {
 }
 
 .bg-overlay {
-    background: rgba(248, 1, 1, 0.685);
+    background: rgba(209, 0, 0, 0.685);
     backdrop-filter: blur(1.6px);
 }
