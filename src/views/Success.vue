@@ -2,11 +2,10 @@
   <AppLayout>
     <Card class="max-w-md w-full">
       <p class="text-2xl font-bold text-blue-900 mb-3 text-center">
-        {{ contactStore.contact?.name }}, cadastro foi realizado com sucesso!
+        {{ contactStore.contact?.first_name }}, cadastro foi realizado com sucesso!
       </p>
 
       <div class="w-full bg-gray-50 rounded-xl p-4 mb-4 shadow">
-        <p class="text-gray-700 mb-2"><strong>Nome:</strong> {{ contactStore.contact.name}}</p>
         <p class="text-gray-700 mb-2"><strong>Curso:</strong> {{ contactStore.contact.course}}</p>
         <p class="text-gray-700 mb-2"><strong>Cidade:</strong> {{ contactStore.contact.city}}</p>
       

@@ -13,7 +13,7 @@
       v-mask="'##/##/####'" aria-label="Data de nascimento" :error="errors.date_of_birth" />
 
     <Select v-model="registerForm.course" :placeholder="'Selecione o curso'" required
-      :options="availableGroupedOptions()" :error="errors.course || ''" />
+      :options="courseOptions" :error="errors.course || ''" />
 
     <Select v-model="registerForm.city" placeholder="Selecione uma Cidade *" required aria-label="Cidade"
       :options="citiesOptions" :error="errors.city">
@@ -22,7 +22,7 @@
     <div class="flex items-start gap-2 text-sm">
       <input id="aceito-termos" type="checkbox" required class="mt-1 accent-blue-800" />
       <label for="aceito-termos" class="select-none">
-        Li e aceito os Termos de Uso e os Termos da Promoção.
+        Li e aceito os Termos de Uso e os Termos do Desconto.
       </label>
     </div>
 

@@ -4,14 +4,14 @@
       <h2 class="text-2xl font-bold text-gray-800 mb-3 text-center">Inscreva-se!</h2>
       <p class="text-sm text-gray-600 text-center mb-6">
         Preencha todos os campos abaixo para <br/>
-        concorrer a <span class="font-bold text-red-800">Bolsa de Estudos 100% Grátis</span>.
+        concorrer a um <span class="font-bold text-red-800">Desconto de 50%</span>.
       </p>
 
       <FormRegister/>
 
       <div class="w-full flex flex-col justify-center items-center gap-4 mt-4 px-2">
         <div class="flex flex-wrap items-center gap-4">
-          <Badge>+12.000 bolsas já concedidas</Badge>
+          <Badge>Em breve você receberá mais informações.</Badge>
         </div>
       </div>
     </Card>
