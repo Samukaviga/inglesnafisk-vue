@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 body {
-    background-image: url('../images/background.webp');
+    background-image: url('../images/background-fisk-suzano.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .bg-overlay {
-    background: rgba(209, 0, 0, 0.685);
-    backdrop-filter: blur(1.6px);
+    background: rgba(243, 2, 2, 0.685);
+    backdrop-filter: blur(8px);
 }

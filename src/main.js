@@ -15,7 +15,7 @@ const app = createApp(App);
 app.use(router).use(pinia);
 
 app.use(createGtm({
-    id: 'GTM-5H33S55',
+    id: 'GTM-WJH2VZK',
     enabled: true,
     debug: false,
     vueRouter: router,

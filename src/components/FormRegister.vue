@@ -12,8 +12,8 @@
     <Input v-model="registerForm.date_of_birth" type="tel" placeholder="Data de nascimento" required
       v-mask="'##/##/####'" aria-label="Data de nascimento" :error="errors.date_of_birth" />
 
-    <Select v-model="registerForm.course" :placeholder="'Selecione o curso'" required
-      :options="courseOptions" :error="errors.course || ''" />
+    <Select v-model="registerForm.course" :placeholder="'Selecione o curso'" required :options="courseOptions"
+      :error="errors.course || ''" />
 
     <Select v-model="registerForm.city" placeholder="Selecione uma Cidade *" required aria-label="Cidade"
       :options="citiesOptions" :error="errors.city">
@@ -33,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import axios from 'axios';
 
@@ -41,6 +42,8 @@ import Button from '@/components/ui/Button.vue';
 import Select from '@/components/ui/Select.vue';
 import type { RegisterForm } from '@/types/RegisterForm';
 import { useContactStore } from '@/stores/contactStore';
+
+const params = new URLSearchParams(window.location.search);
 
 const router = useRouter();
 import { computed, reactive, ref } from 'vue'
@@ -81,10 +84,37 @@ const availableGroupedOptions = (index: number) => {
 const registerForm = reactive<RegisterForm>({
   name: '',
   mobile_phone: '',
-  email: '', 
+  email: '',
   date_of_birth: '',
   course: '',
   city: '',
+  utm_source: '',
+  utm_medium: '',
+  utm_campaign: '',
+  utm_term: '',
+  utm_content: '',
+  gclid: '',
+  fbclid: '',
+  msclkid: '',
+  referrer: '',
+  landing_page: '',
+});
+
+onMounted(() => {
+  const params = new URLSearchParams(window.location.search);
+
+  registerForm.utm_source   = params.get('utm_source')   || '';
+  registerForm.utm_medium   = params.get('utm_medium')   || '';
+  registerForm.utm_campaign = params.get('utm_campaign') || '';
+  registerForm.utm_term     = params.get('utm_term')     || '';
+  registerForm.utm_content  = params.get('utm_content')  || '';
+  registerForm.gclid        = params.get('gclid')        || '';
+  registerForm.fbclid       = params.get('fbclid')       || '';
+  registerForm.msclkid      = params.get('msclkid')      || '';
+
+  // opcional: registrar a origem e página de destino
+  registerForm.referrer = document.referrer || '';
+  registerForm.landing_page = window.location.href;
 });
 
 
@@ -104,7 +134,7 @@ async function handleSubmit() {
     console.log('Response:', response);
 
     const contact = response.data.data;
-    
+
     const contactStore = useContactStore(contact.id);
 
     contactStore.setContact(contact);
