@@ -103,16 +103,36 @@ const registerForm = reactive<RegisterForm>({
 onMounted(() => {
   const params = new URLSearchParams(window.location.search);
 
-  registerForm.utm_source   = params.get('utm_source')   || '';
-  registerForm.utm_medium   = params.get('utm_medium')   || '';
-  registerForm.utm_campaign = params.get('utm_campaign') || '';
-  registerForm.utm_term     = params.get('utm_term')     || '';
-  registerForm.utm_content  = params.get('utm_content')  || '';
-  registerForm.gclid        = params.get('gclid')        || '';
-  registerForm.fbclid       = params.get('fbclid')       || '';
-  registerForm.msclkid      = params.get('msclkid')      || '';
+  // 1️⃣ Verifica se há parâmetros UTM na URL e salva no localStorage
+  const utmKeys = [
+    'utm_source',
+    'utm_medium',
+    'utm_campaign',
+    'utm_term',
+    'utm_content',
+    'gclid',
+    'fbclid',
+    'msclkid'
+  ];
 
-  // opcional: registrar a origem e página de destino
+  let hasUtm = false;
+  utmKeys.forEach(key => {
+    const value = params.get(key);
+    if (value) {
+      hasUtm = true;
+      localStorage.setItem(key, value);
+    }
+  });
+
+  // 2️⃣ Se a página não veio com parâmetros, tenta recuperar do localStorage
+  utmKeys.forEach(key => {
+    const stored = localStorage.getItem(key);
+    if (stored && !registerForm[key]) {
+      registerForm[key] = stored;
+    }
+  });
+
+  // 3️⃣ Captura informações complementares
   registerForm.referrer = document.referrer || '';
   registerForm.landing_page = window.location.href;
 });
