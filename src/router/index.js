@@ -6,8 +6,8 @@ const routes = [
         name: 'Home',
         component: () => import('@/views/Register.vue'),
         meta: {
-            title: 'Bolsas de Estudo Grátis - Liceu Brasil',
-            description: 'Garanta sua bolsa 100% gratuita no Liceu Brasil! Inscreva-se agora e transforme seu futuro.',
+            title: 'Fisk - Desconto de 50% Fisk',
+            description: 'Garanta um desconto de 50% na Fisk!. Inscreva-se agora e transforme seu futuro.',
         },
     },
     {
@@ -16,8 +16,8 @@ const routes = [
         component: () => import('@/views/Complete.vue'),
         props: true,
         meta: {
-            title: 'Complete seu Cadastro - Liceu Brasil',
-            description: 'Complete seu cadastro para finalizar a inscrição na bolsa de estudos do Liceu Brasil.',
+            title: 'Complete seu Cadastro - Fisk',
+            description: 'Complete seu cadastro para finalizar a inscrição.',
         },
     },
     {
@@ -26,8 +26,8 @@ const routes = [
         props: true,
         component: () => import('@/views/Schedule.vue'),
         meta: {
-            title: 'Agendamento - Liceu Brasil',
-            description: 'Agende seu atendimento para garantir sua vaga na bolsa de estudos do Liceu Brasil.',
+            title: 'Agendamento - Fisk',
+            description: 'Agende seu atendimento para garantir sua vaga.',
         },
     },
     {
