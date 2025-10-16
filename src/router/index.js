@@ -36,8 +36,8 @@ const routes = [
         props: true,
         component: () => import('@/views/Confirmation.vue'),
         meta: {
-            title: 'Confirmação de Agendamento - Liceu Brasil',
-            description: 'Veja os detalhes do seu agendamento para concluir sua inscrição no Liceu Brasil.',
+            title: 'Confirmação de Agendamento - Fisk',
+            description: 'Veja os detalhes do seu agendamento para concluir sua inscrição na Fisk.',
         },
     },
     {
@@ -46,8 +46,8 @@ const routes = [
         component: () => import('@/views/Success.vue'),
         props: true,
         meta: {
-            title: 'Cadastro Realizado com Sucesso - Liceu Brasil',
-            description: 'Seu cadastro foi realizado com sucesso! Acompanhe os próximos passos para sua bolsa.',
+            title: 'Cadastro Realizado com Sucesso - Fisk',
+            description: 'Seu cadastro foi realizado com sucesso!',
         },
     },
     {
@@ -55,8 +55,8 @@ const routes = [
         name: 'Agendamento',
         component: () => import('@/views/HasScheduled.vue'),
         meta: {
-            title: 'Confirmação de Agendamento - Liceu Brasil',
-            description: 'Veja os detalhes do seu agendamento para concluir sua inscrição no Liceu Brasil.',
+            title: 'Confirmação de Agendamento - Fisk',
+            description: 'Veja os detalhes do seu agendamento para concluir sua inscrição no Fisk.',
         },
     },
     {
@@ -64,7 +64,7 @@ const routes = [
         name: 'NotFound',
         component: () => import('@/views/NotFound.vue'),
         meta: {
-            title: 'Página não encontrada - Liceu Brasil',
+            title: 'Página não encontrada - Fisk',
             description: 'A página que você tentou acessar não existe. Volte para o início.',
         },
     },
@@ -81,7 +81,7 @@ const routes = [
         component: () => import('@/views/ScheduleUnavailable.vue'),
         props: route => ({ message: route.query.message }),
         meta: {
-            title: 'Página não encontrada - Liceu Brasil',
+            title: 'Página não encontrada - Fisk',
             description: 'A página que você tentou acessar não existe. Volte para o início.',
         },
     },
