@@ -1,7 +1,7 @@
 <template>
   <section class="w-full lg:w-1/2 flex flex-col items-center justify-center">
     <div class="w-full flex justify-center mb-6 pt-8">
-      <img src="@/assets/images/logo-bolsas-azul.webp" alt="Bolsas de Estudo Liceu Brasil"
+      <img src="@/assets/images/insert-fisk.webp" alt="Bolsas de Estudo Liceu Brasil"
            class="max-w-xs md:max-w-sm lg:max-w-md w-full mb-4 drop-shadow-lg select-none pointer-events-none"
            draggable="false" />
     </div>

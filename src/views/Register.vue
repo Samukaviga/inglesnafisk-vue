@@ -10,7 +10,7 @@
       <FormRegister/>
 
       <div class="w-full flex flex-col justify-center items-center gap-4 mt-4 px-2">
-        <div class="flex flex-wrap items-center gap-4">
+        <div class="flex flex-wrap items-center text-center gap-4">
           <Badge>Em breve você receberá mais informações.</Badge>
         </div>
       </div>
